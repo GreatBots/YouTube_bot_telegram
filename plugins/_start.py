@@ -23,5 +23,5 @@ START_BUTTONS = InlineKeyboardMarkup(
 async def start(bot, message):
     reply_markup = START_BUTTONS
     await message.reply(
-        f"Hello {message.from_user.first_name}!\n\nThis bot can search for YouTube videos & download YouTube videos, playlists and more. "
+        f"Hello {message.from_user.first_name}!\n\nThis bot can search for YouTube videos & download YouTube videos with playlist support. "
         f"To search videos click the below \"🔍Search Youtube\" button. /help for more info.", reply_markup=reply_markup)
