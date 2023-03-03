@@ -123,7 +123,7 @@ yt_regex = r'(.*)youtube.com/(.*)[&|?]v=(?P<video>[^&]*)(.*)'
 yt_regex2 = r'(.*)youtu.be/(?P<video>[^&]*)(.*)'
 
 
-@Client.on_message(filters.regex(yt_regex) & ~filters.regex(yt_regex2))
+@Client.on_message(filters.regex(yt_regex) & filters.regex(yt_regex2))
 async def yt_download(bot, message):
     global chat_id
     chat_id = message.chat.id
